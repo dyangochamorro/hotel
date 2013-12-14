@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000" >
+
+    <LinearLayout
+        android:id="@+id/ll_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vol_layout"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/voice_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/vol_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/vol_sound" />
+
+        <ProgressBar
+            android:id="@+id/vol_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:progressDrawable="@drawable/music_player_progress_style" />
+    </LinearLayout>
+
+</FrameLayout>

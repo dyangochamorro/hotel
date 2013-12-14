@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hotel="http://schemas.android.com/apk/res/com.shine.hotels"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/index_left_1" >
+
+    <ImageView
+        android:id="@+id/tools_logo_pic"
+        android:layout_width="180dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+         />
+
+    <com.shine.hotels.ui.widget.HotelClock
+        android:id="@+id/tools_clock"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tools_logo_pic"
+        android:layout_below="@id/tools_logo_pic"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@null"
+        hotel:dialDrawable="@drawable/clock_left"
+        hotel:hourDrawable="@drawable/clock_left_hour"
+        hotel:minuteDrawable="@drawable/clock_left_min"
+        hotel:secondDrawable="@drawable/clock_left_second" />
+
+    <TextView
+        android:id="@+id/tools_now_date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tools_clock"
+        android:layout_below="@id/tools_clock"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tools_week_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tools_now_date_txt"
+        android:layout_below="@id/tools_now_date_txt"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/tools_clear_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tools_week_txt"
+        android:layout_below="@id/tools_week_txt"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/clear" />
+
+    <com.shine.hotels.ui.AlwaysMarqueeTextView
+        android:id="@+id/tools_city_txt"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tools_clear_pic"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@id/tools_clear_pic"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tools_temperature_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tools_clear_pic"
+        android:layout_below="@id/tools_clear_pic"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/tools_msgnum_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tools_temperature_txt"
+        android:layout_below="@id/tools_temperature_txt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/num"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tools_msgnum_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tools_temperature_txt"
+        android:layout_below="@id/tools_temperature_txt"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="63dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/tools_play_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tools_temperature_txt"
+        android:layout_below="@id/tools_temperature_txt"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="175dp"
+        android:background="@drawable/cd_animation"
+        android:contentDescription="@null" />
+
+    <com.shine.hotels.ui.AlwaysMarqueeTextView
+        android:id="@+id/tools_songname_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tools_temperature_txt"
+        android:layout_below="@id/tools_temperature_txt"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="223dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textSize="15sp" />
+
+</RelativeLayout>

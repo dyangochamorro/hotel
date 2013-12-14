@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>     
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+ 	android:layout_width="fill_parent" 
+ 	android:layout_height="fill_parent"   
+ 	android:background="@drawable/index_right"  
+ 	>
+ 	
+    <ImageView 
+        android:id="@+id/shang"
+        android:src="@drawable/shang" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="500dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/xia"
+        android:src="@drawable/xia" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="580dp"
+        android:layout_marginLeft="500dp"
+        />
+ 	
+    <LinearLayout
+		android:layout_width="550dp"
+        android:layout_height="508dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+		android:orientation="vertical"
+		android:background="@drawable/check_bg"
+		>
+	
+		<LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="92dp"
+	        android:layout_marginTop="81dp"
+	        >
+	        <TextView 
+	            android:id="@+id/billquery_txt1"
+	            android:text="@string/billquery_sy" 
+	            android:layout_width="56dp" 
+	            android:gravity="center"
+	            android:layout_height="wrap_content" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	            />
+	        <TextView 
+	            android:id="@+id/billquery_txt2"
+	            android:text="@string/billquery_xm" 
+	            android:layout_width="183dp" 
+	            android:gravity="center"
+	            android:layout_height="wrap_content" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	            />
+	        <TextView 
+	            android:id="@+id/billquery_txt3"
+	            android:text="@string/billquery_sl" 
+	            android:layout_width="42dp" 
+	            android:gravity="center"
+	            android:layout_height="wrap_content" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	            />
+	        <TextView 
+	            android:id="@+id/billquery_txt4"
+	            android:text="@string/billquery_fy" 
+	            android:layout_width="96dp" 
+	            android:gravity="center"
+	            android:layout_height="wrap_content" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	            />
+	    </LinearLayout>
+	
+	    <ListView 
+	        android:id="@+id/billquery_listview" 
+		    android:layout_width="367dp"
+	        android:layout_height="490px" 
+	        android:layout_marginLeft="92dp"
+	        android:layout_marginTop="3dp"
+	        android:scrollbars="none"
+	        />
+	    
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="270dp"
+	        android:layout_marginTop="5dp"
+	        >
+	        <TextView   
+			   	android:id="@+id/xiaofeijiner_txt" 
+			   	android:layout_width="wrap_content"   
+			   	android:layout_height="wrap_content"
+			   	android:text="@string/billquery_xiaofeijiner"
+			   	/>
+	    
+		    <TextView   
+			   	android:id="@+id/total_txt" 
+			   	android:layout_width="wrap_content"   
+			   	android:layout_height="wrap_content"
+			   	android:paddingLeft="10dp"
+			   	android:paddingRight="10dp"
+			   	android:textColor="@android:color/holo_red_light"
+			   	/>
+		    
+		    <TextView   
+			   	android:id="@+id/rmb_txt" 
+			   	android:layout_width="wrap_content"   
+			   	android:layout_height="wrap_content"
+			   	android:text="@string/billquery_rmb"
+			   	/>
+	    </LinearLayout>
+	</LinearLayout>
+    
+    
+    
+</FrameLayout>

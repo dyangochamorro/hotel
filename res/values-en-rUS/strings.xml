@@ -1,0 +1,128 @@
+<resources>
+
+    <string name="app_name">Hotels</string>
+    <string name="imageView_desc">Image</string>
+    
+    <string name="billquery_xiaofeijiner">Total</string>
+    <string name="billquery_rmb">RMB</string>
+    <string name="usedphone_commonphone">Commnoly Used Phone Number</string>
+    <string name="usedphone_hotelphone">Hotel Phone Number</string>
+    
+    <string name="butlerservicecontent_txt">Butler service items</string>
+    
+    <string name="flightinfo_gnjghb">Domestic arrival</string>
+    <string name="flightinfo_gncghb">domestic departure</string>
+    <string name="flightinfo_gjjghb">international arrival</string>
+    <string name="flightinfo_gjcghb">international departure</string>
+    
+     
+    
+    <string name="flight_airline">Airline</string>
+    <string name="flight_num">Flight No</string>
+    <string name="flight_expected_depart">Estimated time of departure</string>
+    <string name="flight_actual_depart">actual time of departure</string>
+    <string name="flight_depart">origin</string>
+    <string name="flight_depart_t">departure building</string>
+    <string name="flight_expected_arrive">estimated time of arrival</string>
+    <string name="flight_actual_arrive">actual time of arrival</string>
+    <string name="flight_destination">destination</string>
+    <string name="flight_destination_t">airport pickup building</string>
+    <string name="flight_status">Status</string>
+    
+    <string name="worldtime_add">Add the time in other areas</string>
+    <string name="weather_add">Add the weather forecast in other places</string>
+    
+    <string name="city">City</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="the_day_after_tomorrow">The Day After Tomorrow</string>
+    <string name="temperature">air temperature</string>
+    <string name="temperature_format">%1$d ~ %2$d</string>
+    
+    <string name="add_yes">OK</string>
+    <string name="affirm">OK</string>
+    <string name="cancel">Cancel</string>
+    
+    <string name="movie_preview">Preview</string>
+    <string name="movie_play">Play</string>
+    <string name="movie_name">film name</string>
+    
+    <string name="bill_affirm">Are you sure you want to checkout</string>
+   
+    <string name="room_service">Please confirm whether the call butler service</string>
+    
+    <string-array name="code">
+        <item>CHXX0008</item>
+        <item>CHXX0116</item>
+        <item>CHXX0120</item>
+        <item>CHXX0049</item>
+        <item>USNY0996</item>
+        <item>USDC0001</item>
+        <item>JAXX0085</item>
+        <item>RSXX0063</item>
+        <item>THXX0002</item>
+        <item>SNXX0006</item>
+        <item>KSXX0037</item>
+    </string-array>
+    
+    <string-array name="code_city">
+        <item>北京</item>
+        <item>上海</item>
+        <item>深圳</item>
+        <item>香港</item>
+        <item>纽约</item>
+        <item>华盛顿</item>
+        <item>东京</item>
+        <item>莫斯科</item>
+        <item>曼谷</item>
+        <item>新加坡</item>
+        <item>首尔</item>
+    </string-array>
+    
+     <string name="movie_director">Director:  </string>
+     <string name="movie_protagonist">Starring:  </string>
+     <string name="movie_duration">Time:  </string>
+     <string name="movie_intro">Plot:  </string>
+     
+     <string name="home_choose_ch">To continue select language button</string>
+     <string name="home_choose_en">Click on language button to continue</string>
+     <string name="home_language_ch">Chinese</string>
+     <string name="home_language_en">English</string>
+     
+     <string name="billquery_sy">Index</string>
+     <string name="billquery_xm">Item</string>
+     <string name="billquery_sl">Num</string>
+     <string name="billquery_fy">Expense(RMB)</string>
+     
+     <string name="toast_msg">The news sent successfully!</string>
+     <string name="add_successfully">Add successfully</string>
+     
+     
+     <string name="carrental_cx">Train type</string>
+     <string name="carrental_zws">Seating capacity</string>
+     <string name="carrental_dj">Unit price(RMB/hour)</string>
+     <string name="carrental_sj">driver</string>
+     
+     <string name="traininfo_cc">Number</string>
+     <string name="traininfo_lx">Type</string>
+     <string name="traininfo_sfz">Origin</string>
+     <string name="traininfo_cfz">Departure station </string>
+     <string name="traininfo_cfsj">Departure time</string>
+     <string name="traininfo_mdz">Destination</string>
+     <string name="traininfo_ddsj">Time of arrival</string>
+     <string name="traininfo_zdz">Terminal station</string>
+     <string name="traininfo_ls">Duration</string>
+     <string name="traininfo_lc">Mileage</string>
+     
+     
+      <string name="hotelintroduction_hdp">slide</string>
+     <string name="hotelintroduction_sp">video</string>
+     
+     <string name="memoserv_index">Index</string>
+     <string name="memoserv_mc">Message Content</string>
+     <string name="memoserv_time">Time</string>
+     
+     <string name="pay_tips">Please press the up and down key choose billing way, press OK key play video</string>
+     <string name="exit_vod">If you confirm the out of the video is playing</string>
+     <string name="confirm">Confirm</string>
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>     
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+ 	android:layout_width="fill_parent" 
+ 	android:layout_height="fill_parent"   
+ 	android:background="@drawable/index_right"  
+ 	>
+ 	
+    <ImageView
+        android:id="@+id/flight_bg"
+        android:src="@drawable/flight_bg" 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="170dp"
+    	/>
+    
+    <ImageView 
+        android:id="@+id/huangyekong_btn_up_1"
+        android:src="@drawable/huangyekong_btn_up" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+		android:layout_marginTop="140dp"
+        android:layout_marginLeft="250dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/huangyekong_btn_down"
+        android:src="@drawable/huangyekong_btn_down" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+		android:layout_marginTop="140dp"
+        android:layout_marginLeft="382dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/huangyekong_btn_up_3"
+        android:src="@drawable/huangyekong_btn_up" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+		android:layout_marginTop="140dp"
+        android:layout_marginLeft="512dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/huangyekong_btn_up_4"
+        android:src="@drawable/huangyekong_btn_up" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+		android:layout_marginTop="140dp"
+        android:layout_marginLeft="644dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/huangyekong"
+        android:src="@drawable/huangyekong" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+		android:layout_marginTop="120dp"
+        android:layout_marginLeft="224dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/tiao"
+        android:src="@drawable/tiao" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="302dp"
+        android:layout_marginLeft="199dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/shang"
+        android:src="@drawable/shang" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="500dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/xia"
+        android:src="@drawable/xia" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="540dp"
+        android:layout_marginLeft="500dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/left"
+        android:src="@drawable/left" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:layout_marginLeft="225dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/right"
+        android:src="@drawable/right" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:layout_marginLeft="788dp"
+        />
+    
+    <TextView   
+	   	android:id="@+id/gnjghb_txt" 
+	   	android:layout_width="wrap_content"   
+	   	android:layout_height="wrap_content"
+	   	android:text="@string/flightinfo_gnjghb"
+	   	android:textColor="@android:color/white"
+	   	android:textSize="13sp"
+	   	android:layout_marginLeft="276dp"
+	   	android:layout_marginTop="163dp"
+	   	/>
+    
+    <TextView   
+	   	android:id="@+id/gncghb_txt" 
+	   	android:layout_width="wrap_content"   
+	   	android:layout_height="wrap_content"
+	   	android:text="@string/flightinfo_gncghb"
+	   	android:textColor="@android:color/white"
+	   	android:textSize="13sp"
+	   	android:layout_marginLeft="408dp"
+	   	android:layout_marginTop="163dp"
+	   	/>
+    
+    <TextView   
+	   	android:id="@+id/gjjghb_txt" 
+	   	android:layout_width="wrap_content"   
+	   	android:layout_height="wrap_content"
+	   	android:text="@string/flightinfo_gjjghb"
+	   	android:textColor="@android:color/white"
+	   	android:textSize="13sp"
+	   	android:layout_marginLeft="538dp"
+	   	android:layout_marginTop="163dp"
+	   	/>
+    
+    <TextView   
+	   	android:id="@+id/gjcghb_txt" 
+	   	android:layout_width="wrap_content"   
+	   	android:layout_height="wrap_content"
+	   	android:text="@string/flightinfo_gjcghb"
+	   	android:textColor="@android:color/white"
+	   	android:textSize="13sp"
+	   	android:layout_marginLeft="670dp"
+	   	android:layout_marginTop="163dp"
+	   	/>
+    
+    <ListView 
+        android:id="@+id/flightinfo_listview" 
+	    android:layout_width="632dp"
+        android:layout_height="500dp" 
+	    android:layout_marginLeft="197dp"
+	   	android:layout_marginTop="193dp"
+        />
+    	 
+</RelativeLayout>

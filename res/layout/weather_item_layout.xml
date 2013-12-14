@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather_bg2"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/weather_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        style="@style/WeatherText"
+        android:text="北京" />
+
+    <TextView
+        android:id="@+id/weather_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/WeatherText"
+        android:text="今天" />
+
+    <ImageView
+        android:id="@+id/weather_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/weather_sun"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/weather_today_temperatures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/WeatherText"
+        android:text="30" />
+
+    <TextView
+        android:id="@+id/weather_tomorrow_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/WeatherText"
+        android:text="明天" />
+
+    <TextView
+        android:id="@+id/weather_third_temperatures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/WeatherText"
+        android:text="后天" />
+
+</LinearLayout>

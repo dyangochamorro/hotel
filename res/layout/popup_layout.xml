@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:cacheColorHint="#00000000"
+    android:orientation="vertical" >
+
+    <com.shine.hotels.ui.SubtitleTextView 
+        android:id="@+id/SubtitleTextView"
+        android:layout_height="30dp" 
+        android:layout_width="fill_parent"
+        android:textColor="#000" 
+        android:inputType="text"
+        android:background="#EEE" 
+        android:textSize="20pt" 
+        />
+
+
+</LinearLayout>

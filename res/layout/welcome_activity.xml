@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="450dp"
+        android:layout_height="600dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/letter2" />
+
+    <TextView
+        android:id="@+id/content_mr"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="120dp"
+        android:text="先生："
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="364dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="160dp"
+        android:text="    诚挚的欢迎阁下"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/home_choose_ch"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="740dp"
+        android:layout_marginTop="320dp"
+        android:text="@string/home_choose_ch"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/home_choose_en"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="670dp"
+        android:layout_marginTop="350dp"
+        android:text="@string/home_choose_en"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:id="@+id/chn"
+        android:layout_width="170dp"
+        android:layout_height="230dp"
+        android:layout_marginLeft="720dp"
+        android:layout_marginTop="440dp"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/chn_image"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/cn_btn_down" />
+
+        <TextView
+            android:id="@+id/chn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/home_language_ch"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eng"
+        android:layout_width="170dp"
+        android:layout_height="230dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="440dp"
+        android:layout_toRightOf="@id/chn"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/eng_image"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/en_btn_up" />
+
+        <TextView
+            android:id="@+id/eng_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/home_language_en"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/right_view"
+        android:layout_width="640dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/home_right" />
+
+    <FrameLayout
+        android:id="@+id/left_view_layout"
+        android:layout_width="760dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_left" >
+
+        <ImageView
+            android:id="@+id/left_view"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="right|center_vertical"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="center" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/auth_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="40dp"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

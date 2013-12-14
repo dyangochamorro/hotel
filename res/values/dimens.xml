@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="movie_list_text_size">18sp</dimen>
+
+    <integer name="videoWindowType_x">0</integer>
+    <integer name="videoWindowType_y">0</integer>
+    <integer name="videoWindowType_width">1920</integer>
+    <integer name="videoWindowType_height">1080</integer>
+    <integer name="surfaceParams_x">0</integer>
+    <integer name="surfaceParams_y">0</integer>
+    <integer name="surfaceParams_width">1440</integer>
+    <integer name="surfaceParams_height">950</integer>
+    
+    <dimen name="tv_x">380dp</dimen>
+    <dimen name="tv_y">302dp</dimen>
+    <dimen name="tv_width">270dp</dimen>
+    <dimen name="tv_height">165dp</dimen>
+    
+    <integer name="videoWindowType_width_K">1920</integer>
+    <integer name="videoWindowType_height_K">1080</integer>
+    
+     <dimen name="videoWindowType1_x">410dp</dimen>
+    <dimen name="videoWindowType1_y">300dp</dimen>
+    <dimen name="videoWindowType1_width">240dp</dimen>
+    <dimen name="videoWindowType1_height">160dp</dimen>
+    
+    <dimen name="surfaceParams1_x">380dp</dimen>
+    <dimen name="surfaceParams1_y">302dp</dimen>
+    <dimen name="surfaceParams1_width">270dp</dimen>
+    <dimen name="surfaceParams1_height">165dp</dimen>
+    
+    <!-- <dimen name="time_h_scrollview_width">747dp</dimen> -->
+    <dimen name="time_h_scrollview_width">1125px</dimen>
+</resources>

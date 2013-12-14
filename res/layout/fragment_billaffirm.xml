@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340dp"
+    android:layout_height="match_parent" >
+    
+    <FrameLayout android:layout_width="340dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@drawable/tanchu_bg"/>
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <!--wsl 改动过 android:text="@string/bill_affirm"-->
+        <TextView 
+            android:id="@+id/tv"
+             
+            android:layout_width="260dp" 
+            android:gravity="center"
+            android:layout_height="wrap_content" 
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="#7e6d51"
+            android:textSize="20sp"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/left" />
+
+            <Button
+                android:id="@+id/add_yes"
+                style="@style/Button"
+                android:layout_width="100dp"
+                android:focusable="true"
+                android:text="@string/affirm" />
+
+            <Button
+                android:id="@+id/cancel"
+                style="@style/Button"
+                android:layout_width="100dp"
+                android:focusable="true"
+                android:text="@string/cancel" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/right" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

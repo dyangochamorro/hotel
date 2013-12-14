@@ -1,0 +1,130 @@
+<resources>
+
+    <string name="app_name">Hotels</string>
+    <string name="imageView_desc">Image</string>
+    
+    <string name="billquery_xiaofeijiner">消费总额</string>
+    <string name="billquery_rmb">RMB</string>
+    <string name="usedphone_commonphone">常用电话号码</string>
+    <string name="usedphone_hotelphone">酒店电话号码</string>
+    
+    <string name="butlerservicecontent_txt">管家服务内容</string>
+    
+    <string name="flightinfo_gnjghb">国内进港航班</string>
+    <string name="flightinfo_gncghb">国内出港航班</string>
+    <string name="flightinfo_gjjghb">国际进港航班</string>
+    <string name="flightinfo_gjcghb">国际出港航班</string>
+    <string name="flight_airline">航空公司</string>
+    <string name="flight_num">航班号</string>
+    <string name="flight_expected_depart">预计出发</string>
+    <string name="flight_actual_depart">实际出发</string>
+    <string name="flight_depart">始发地</string>
+    <string name="flight_depart_t">乘机楼</string>
+    <string name="flight_expected_arrive">预计到达</string>
+    <string name="flight_actual_arrive">实际到达</string>
+    <string name="flight_destination">目的地</string>
+    <string name="flight_destination_t">接机楼</string>
+    <string name="flight_status">状态</string>
+    
+    <string name="worldtime_add">添加其他地区时间</string>
+    <string name="weather_add">添加其他地区天气预报</string>
+    
+    <string name="city">城市</string>
+    <string name="today">今天</string>
+    <string name="tomorrow">明天</string>
+    <string name="the_day_after_tomorrow">后天</string>
+    <string name="temperature">气温</string>
+    <string name="temperature_format">%1$d ~ %2$d</string>
+    
+    <string name="add_yes">确认添加</string>
+    <string name="affirm">确认</string>
+    <string name="cancel">取消</string>
+    
+    <string name="movie_preview">预览</string>
+    <string name="movie_play">播放</string>
+    <string name="movie_name">影片名</string>
+    
+    <string name="bill_affirm">请您确认是否结账</string>
+    
+    <string-array name="code">
+        <item>CHXX0008</item>
+        <item>CHXX0116</item>
+        <item>CHXX0120</item>
+        <item>CHXX0049</item>
+        <item>USNY0996</item>
+        <item>USDC0001</item>
+        <item>JAXX0085</item>
+        <item>RSXX0063</item>
+        <item>THXX0002</item>
+        <item>SNXX0006</item>
+        <item>KSXX0037</item>
+    </string-array>
+    
+    <string-array name="code_city">
+        <item>北京</item>
+        <item>上海</item>
+        <item>深圳</item>
+        <item>香港</item>
+        <item>纽约</item>
+        <item>华盛顿</item>
+        <item>东京</item>
+        <item>莫斯科</item>
+        <item>曼谷</item>
+        <item>新加坡</item>
+        <item>首尔</item>
+    </string-array>
+    
+     <string name="movie_director">导演:</string>
+     <string name="movie_protagonist">主演:</string>
+     <string name="movie_duration">时长:</string>
+     <string name="movie_intro">简介:</string>
+     
+     <string name="home_choose_ch">继续操作请选择语言按钮</string>
+     <string name="home_choose_en">Click on language button to continue</string>
+     <string name="home_language_ch">中文</string>
+     <string name="home_language_en">English</string>
+     
+     <string name="billquery_sy">索引</string>
+     <string name="billquery_xm">项目</string>
+     <string name="billquery_sl">数量</string>
+     <string name="billquery_fy">费用（RMB）</string>
+     
+     <string name="toast_msg">消息发送成功!</string>
+     <string name="add_successfully">添加成功</string>
+     
+     <string name="carrental_cx">车型</string>
+     <string name="carrental_zws">座位数</string>
+     <string name="carrental_dj">单价（RMB/小时）</string>
+     <string name="carrental_sj">司机</string>
+     
+     <string name="traininfo_cc">车次</string>
+     <string name="traininfo_lx">类型</string>
+     <string name="traininfo_sfz">始发站</string>
+     <string name="traininfo_cfz">出发站</string>
+     <string name="traininfo_cfsj">出发时间</string>
+     <string name="traininfo_mdz">目的站</string>
+     <string name="traininfo_ddsj">到达时间</string>
+     <string name="traininfo_zdz">终点站</string>
+     <string name="traininfo_ls">历时</string>
+     <string name="traininfo_lc">里程</string>
+     
+     <string name="hotelintroduction_hdp">幻灯片</string>
+     <string name="hotelintroduction_sp">视频</string>
+     
+     <string name="tv_num_txt">第 %d 集</string>
+     
+     
+     <string name="memoserv_index">索引</string>
+     <string name="memoserv_mc">留言内容</string>
+     <string name="memoserv_time">时间</string>
+     
+     <string name="room_service">客房服务</string>
+     
+     <string name="not_auth">未授权</string>
+     <string name="expired_auth">授权已过期</string>
+     <string name="network_exception">网络异常，请与管理人员联系</string>
+     
+     <string name="pay_tips">请按上下键选择计费方式，按OK键播放视频</string>
+     <string name="exit_vod">您是否确认退出正在播放的视频</string>
+     <string name="confirm">确认</string>
+</resources>

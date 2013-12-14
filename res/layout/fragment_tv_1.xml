@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/index_right" >
+
+    <FrameLayout
+        android:id="@+id/list_layout"
+        android:layout_width="288dp"
+        android:layout_height="416dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/choice_bg" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="195dp"
+            android:src="@drawable/tv_jiantou_shang" />
+
+        <ListView
+            android:id="@+id/tv_list"
+            android:layout_width="190dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="210dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"
+            android:nextFocusLeft="@id/tv_list"
+            android:nextFocusRight="@id/tv_list"
+            android:nextFocusUp="@id/tv_list"
+            android:nextFocusDown="@id/tv_list"
+             />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="376dp"
+            android:src="@drawable/tv_jiantou_xia" />
+    </FrameLayout>
+    
+    <FrameLayout
+        android:id="@+id/tv_gallery_layout"
+        android:layout_width="750dp"
+        android:layout_height="160dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/choice_tiao" >
+
+        <ImageView
+            android:layout_width="174dp"
+            android:layout_height="124dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/choice_bg_zhongxin" />
+
+        <Gallery
+            android:id="@+id/tv_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animationDuration="600"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:spacing="25dp"
+             />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_toLeftOf="@id/tv_gallery_layout"
+        android:contentDescription="@null"
+        android:paddingLeft="80dp"
+        android:src="@drawable/left" />
+
+    <ImageView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_toRightOf="@id/tv_gallery_layout"
+        android:contentDescription="@null"
+        android:paddingRight="80dp"
+        android:src="@drawable/right" />
+
+    <ImageView
+        android:id="@+id/list_cover"
+        android:layout_width="288dp"
+        android:layout_height="188dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/list_layout"
+        android:scaleType="fitXY"
+        android:src="@drawable/tv_cover" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="46dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:padding="3dp" />
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <SurfaceView
+        android:id="@+id/play_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.shine.hotels.ui.AlwaysMarqueeTextView
+        android:id="@+id/pop_up_txt"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/process_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/vol_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/mute_iv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/vol_sound" />
+
+        <ProgressBar
+            android:id="@+id/vol_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:progressDrawable="@drawable/play_back_player_progress_style" />
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/prev_btn" />
+
+        <ImageButton
+            android:id="@+id/play_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/pause_btn" />
+
+        <ImageButton
+            android:id="@+id/forward_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/next_btn" />
+
+        <TextView
+            android:id="@+id/total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="00:00/00:00"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:src="@drawable/letter1"
+        android:visibility="gone" />
+
+</RelativeLayout>

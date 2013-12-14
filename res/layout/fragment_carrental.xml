@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>     
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+ 	android:layout_width="fill_parent" 
+ 	android:layout_height="fill_parent"   
+ 	android:background="@drawable/index_right"  
+ 	>
+    
+    <ImageView 
+        android:id="@+id/shang"
+        android:src="@drawable/shang" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="500dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/xia"
+        android:src="@drawable/xia" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="570dp"
+        android:layout_marginLeft="500dp"
+        />
+    
+    <LinearLayout
+		android:layout_width="800dp"
+        android:layout_height="505dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+		android:orientation="vertical"
+		android:background="@drawable/zuche_bg"
+		>
+	
+		<LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="38dp"
+	        >
+	        <TextView 
+	            android:text="@string/carrental_cx" 
+	            android:layout_width="250dp" 
+	            android:gravity="center"
+	            android:layout_height="39dp" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	            android:layout_marginTop="28dp"
+	            />
+	        <TextView 
+	            android:text="@string/carrental_zws" 
+	            android:layout_width="160dp" 
+	            android:gravity="center"
+	            android:layout_height="39dp" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	            android:layout_marginTop="28dp"
+	            />
+	        <TextView 
+	            android:text="@string/carrental_dj" 
+	            android:layout_width="170dp" 
+	            android:gravity="center"
+	            android:layout_height="39dp" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	            android:layout_marginTop="28dp"
+	            />
+	        <TextView 
+	            android:text="@string/carrental_sj" 
+	            android:layout_width="140dp" 
+	            android:gravity="center"
+	            android:layout_height="39dp" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	            android:layout_marginTop="28dp"
+	            />
+	    </LinearLayout>
+	    
+	    <ListView 
+	        android:id="@+id/carrental_listview" 
+		    android:layout_width="724dp"
+	        android:layout_height="555px"
+	        android:layout_marginLeft="38dp"
+	        android:scrollbars="none"
+		   	android:listSelector="@drawable/carrental_backgroud"
+	        android:focusable="true"
+	        />
+	</LinearLayout>
+    
+</FrameLayout>

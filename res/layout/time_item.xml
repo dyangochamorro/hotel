@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hotel="http://schemas.android.com/apk/res/com.shine.hotels"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.shine.hotels.ui.widget.HotelClock
+        android:id="@+id/clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@null"
+        hotel:dialDrawable="@drawable/clock"
+        hotel:hourDrawable="@drawable/clock_hour"
+        hotel:minuteDrawable="@drawable/clock_min"
+        hotel:secondDrawable="@drawable/clock_left_second" />
+
+    <TextView
+        android:id="@+id/worldtime_cityname"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/city"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

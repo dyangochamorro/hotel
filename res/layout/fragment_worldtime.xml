@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/index_right" >
+
+    <HorizontalScrollView
+        android:id="@+id/worldtime_view"
+        android:layout_width="@dimen/time_h_scrollview_width"
+        android:layout_height="500dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none" >
+
+        <GridLayout
+            android:id="@+id/time_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:rowCount="2"
+            android:scrollbars="none" />
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/worldtime_view"
+        android:layout_alignTop="@id/worldtime_view"
+        android:layout_marginTop="260dp"
+        android:contentDescription="@null"
+        android:src="@drawable/left" />
+
+    <ImageView
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/worldtime_view"
+        android:layout_alignTop="@id/worldtime_view"
+        android:layout_marginTop="260dp"
+        android:contentDescription="@null"
+        android:src="@drawable/right" />
+
+    <Button
+        android:id="@+id/add_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/worldtime_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#fc9709"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/worldtime_add"
+        android:textColor="@color/white_text" />
+
+</RelativeLayout>

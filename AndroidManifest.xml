@@ -1,0 +1,118 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shine.hotels"
+    android:versionCode="2"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.PERSISTENT_ACTIVITY" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.mstar.permission.RW_TV_DATA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS" />
+
+    <application
+        android:name="HotelsApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/Theme.Hotels" >
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- <activity
+            android:name=".ui.WelcomeActivity"
+            android:screenOrientation="landscape" >
+        </activity> -->
+        <activity
+            android:name=".ui.HostActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".ui.FullScreenPlayActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.shine.hotels.action.PLAY_FULL_SCREEN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.com.shine.hotel.tv.FullTVActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.com.shine.hotel.tv.HotelTVActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.shine.hotels.ui.hotelintroduction.PPTActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+             >
+        </activity>
+
+        <service
+            android:name="com.shine.hotels.service.RoomService"
+            android:exported="false" />
+        <service
+            android:name="com.shine.hotels.service.TravelInfoService"
+            android:exported="false" />
+        <service
+            android:name="com.shine.hotels.service.HotelintroductionService"
+            android:exported="false" />
+        <service
+            android:name="com.shine.hotels.service.AppreciatetvService"
+            android:exported="false" />
+        <service
+            android:name="com.shine.hotels.service.AppreciatemovieService"
+            android:exported="false" />
+        <service
+            android:name="com.shine.hotels.service.AppreciatemusicService"
+            android:exported="false" />
+        <service
+            android:name="com.shine.hotels.service.ToolbarService"
+            android:exported="false" />
+        <service
+            android:name="com.shine.hotels.service.MenuService"
+            android:exported="false" />
+        <service
+            android:name="com.shine.hotels.service.SubtitleService"
+            android:exported="false" />
+        <service
+            android:name="com.shine.hotels.service.SystemLocalService"
+            android:exported="false" />
+        <service android:name="com.shine.hotels.service.MusicService" >
+        </service>
+
+        <!-- <receiver android:name=".ui.SubtitleReceiver"/> -->
+
+    </application>
+
+</manifest>

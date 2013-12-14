@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>     
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+ 	android:layout_width="fill_parent" 
+ 	android:layout_height="fill_parent"   
+ 	android:background="@drawable/index_right"  
+ 	>
+    
+    <ImageView 
+        android:id="@+id/shang"
+        android:src="@drawable/shang" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="500dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/xia"
+        android:src="@drawable/xia" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="540dp"
+        android:layout_marginLeft="500dp"
+        />
+    
+	<LinearLayout
+		android:layout_width="600dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="105dp"
+		android:orientation="vertical"
+		android:background="@drawable/liuyanfuwu_bg"
+		>
+	
+		<LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="20dp"
+	        >
+	        <TextView 
+	            android:id="@+id/memoserv_txt1"
+	            android:text="@string/memoserv_index" 
+	            android:layout_width="120dp" 
+	            android:gravity="center"
+	            android:layout_height="29dp" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	            android:layout_marginTop="11dp"
+	            />
+	        <TextView 
+	            android:id="@+id/memoserv_txt2"
+	            android:text="@string/memoserv_mc" 
+	            android:layout_width="310dp" 
+	            android:gravity="center"
+	            android:layout_height="29dp" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	            android:layout_marginTop="11dp"
+	            />
+	        <TextView 
+	            android:id="@+id/memoserv_txt3"
+	            android:text="@string/memoserv_time" 
+	            android:layout_width="130dp" 
+	            android:gravity="center"
+	            android:layout_height="29dp" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	            android:layout_marginTop="11dp"
+	            />
+	    </LinearLayout>
+	
+	    <ListView 
+	        android:id="@+id/memoserv_listview" 
+		    android:layout_width="540dp"
+	        android:layout_height="311dp" 
+	        android:layout_marginLeft="28dp"
+	        android:scrollbars="none"
+	        android:listSelector="@drawable/memoserv_backgroud"
+	        android:focusable="true"
+	        />
+	</LinearLayout>
+    
+</FrameLayout>

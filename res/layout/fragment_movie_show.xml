@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/movie_show_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/show_image"
+            android:layout_width="280dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null" />
+
+
+        <FrameLayout
+            android:layout_width="320dp"
+            android:layout_height="520dp"
+            android:background="@drawable/introduce" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="115dp"
+                android:layout_marginLeft="25dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/show_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal|bottom"
+                    android:text="name"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TableLayout
+                    android:layout_width="250dp"
+                    android:layout_height="360dp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="40dp" >
+
+                    <TableRow android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="#6d6d6d"
+                            android:text="@string/movie_director" />
+
+                        <TextView
+                            android:id="@+id/show_director"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                             />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                             android:textColor="#6d6d6d"
+                            android:text="@string/movie_protagonist" />
+
+                        <TextView
+                            android:id="@+id/show_cast"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                             />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                             android:textColor="#6d6d6d"
+                            android:text="@string/movie_duration" />
+
+                        <TextView
+                            android:id="@+id/show_during"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" 
+                            android:layout_marginLeft="3dp"
+                            />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                             android:textColor="#6d6d6d"
+                            android:text="@string/movie_intro" />
+
+                        <TextView
+                            android:id="@+id/show_intro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:ellipsize="end" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/left" />
+
+        <Button
+            android:id="@+id/show_preview"
+            style="@style/Button"
+            android:focusable="true"
+            android:nextFocusUp="@id/show_preview"
+            android:nextFocusDown="@id/show_preview"
+            android:nextFocusLeft="@id/show_preview"
+            android:nextFocusRight="@+id/show_play"
+            android:text="@string/movie_preview" />
+
+        <Button
+            android:id="@+id/show_play"
+            style="@style/Button"
+            android:nextFocusUp="@id/show_play"
+            android:nextFocusDown="@id/show_play"
+            android:nextFocusLeft="@id/show_preview"
+            android:nextFocusRight="@+id/show_play"
+            android:text="@string/movie_play" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/right" />
+    </LinearLayout>
+
+</LinearLayout>

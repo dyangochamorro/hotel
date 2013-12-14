@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/index_right" >
+
+    <RelativeLayout
+        android:layout_width="1000dp"
+        android:layout_height="800dp"
+        android:layout_gravity="center"
+        android:background="@drawable/selected_bg" >
+
+        <ImageView
+            android:id="@+id/show_gallery"
+            android:layout_width="450dp"
+            android:layout_height="340dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="105dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="6dp"
+            android:paddingTop="4dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/show_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/show_gallery"
+            android:layout_below="@id/show_gallery"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@null"
+            android:paddingTop="10dp"
+            android:src="@drawable/left" />
+
+        <Button
+            android:id="@+id/show_gallery_btn"
+            style="@style/Button"
+            android:layout_alignTop="@id/show_left"
+            android:layout_toRightOf="@id/show_left"
+            android:nextFocusDown="@+id/show_gallery_btn"
+            android:nextFocusUp="@+id/show_gallery_btn"
+            android:text="@string/hotelintroduction_hdp" />
+
+        <Button
+            android:id="@+id/show_video_btn"
+            style="@style/Button"
+            android:layout_below="@id/show_gallery"
+            android:layout_toRightOf="@id/show_gallery_btn"
+            android:nextFocusDown="@+id/show_video_btn"
+            android:nextFocusRight="@id/show_video_btn"
+            android:nextFocusUp="@+id/show_video_btn"
+            android:text="@string/hotelintroduction_sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/show_gallery_btn"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/show_video_btn"
+            android:contentDescription="@null"
+            android:paddingTop="10dp"
+            android:src="@drawable/right" />
+
+        <ScrollView
+            android:id="@+id/content_scrollview"
+            android:layout_width="320dp"
+            android:layout_height="480dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="100dp"
+            android:layout_toRightOf="@id/show_gallery"
+            android:nextFocusDown="@id/show_video_btn"
+            android:nextFocusLeft="@id/show_video_btn"
+            android:nextFocusUp="@id/show_video_btn" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <com.shine.hotels.ui.AlwaysMarqueeTextView
+                    android:id="@+id/show_title"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:textColor="#7BAB7B"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/show_content"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="40dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</FrameLayout>

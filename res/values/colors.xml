@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="movie_list_item_text_color">#FFFFFF</color>
+    <color name="white_text">#FFFFFF</color>
+    <color name="black_text">#000000</color>
+    
+    
+    
+     <color name="changyongdianhua_text">#b02f4d</color>
+    
+    
+     <color name="text_text01">#ffffff</color>
+       <color name="text_text02">#000000</color>
+    
+    
+</resources>

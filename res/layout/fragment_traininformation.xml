@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>     
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+ 	android:layout_width="fill_parent" 
+ 	android:layout_height="fill_parent"   
+ 	android:background="@drawable/index_right"  
+ 	>
+ 	
+    <ImageView 
+        android:id="@+id/shang"
+        android:src="@drawable/shang" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="500dp"
+        />
+    
+    <ImageView 
+        android:id="@+id/xia"
+        android:src="@drawable/xia" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="580dp"
+        android:layout_marginLeft="500dp"
+        />
+    
+    <LinearLayout
+		android:layout_width="800dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="75dp"
+		android:orientation="vertical"
+		android:background="@drawable/train_bg"
+		>
+	
+		<LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="34dp"
+	        android:layout_marginLeft="33dp"
+	        	android:layout_marginTop="56dp"
+	        >
+	        <TextView 
+	            android:text="@string/traininfo_cc" 
+	            android:layout_width="64dp" 
+	            android:gravity="center"
+	            android:layout_height="34dp" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	  
+	            />
+	        <TextView 
+	            android:text="@string/traininfo_lx" 
+	            android:layout_width="66dp" 
+	            android:gravity="center"
+	            android:layout_height="34dp" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	        
+	            />
+	        <TextView 
+	            android:text="@string/traininfo_sfz" 
+	            android:layout_width="72dp" 
+	            android:gravity="center"
+	             
+	            android:layout_height="34dp" 
+	            android:textStyle="bold"
+	           
+	            android:textColor="#FFFFFF"
+	           
+	            />
+	        <TextView 
+	            android:text="@string/traininfo_cfz" 
+	            android:layout_width="62dp" 
+	            android:gravity="center"
+	             android:layout_gravity="center"
+	            android:layout_height="34dp" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	           
+	          
+	            />
+	        <TextView 
+	            android:text="@string/traininfo_cfsj" 
+	            android:layout_width="70dp" 
+	            android:gravity="center"
+	            android:layout_height="34dp" 
+	            android:textStyle="bold"
+	             android:layout_gravity="center"
+	            
+	            android:textColor="#FFFFFF"
+	          
+	            />
+	        <TextView 
+	            android:text="@string/traininfo_mdz" 
+	            android:layout_width="78dp" 
+	            android:gravity="center"
+	            android:layout_height="34dp" 
+	            
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	         
+	            />
+	        <TextView 
+	            android:text="@string/traininfo_ddsj" 
+	            android:layout_width="78dp" 
+	            android:gravity="center"
+	            android:layout_height="34dp" 
+	             android:layout_gravity="center"
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	           
+	          
+	            />
+	        <TextView 
+	            android:text="@string/traininfo_zdz" 
+	            android:layout_width="76dp" 
+	            android:gravity="center"
+	            android:layout_gravity="center"
+	            android:layout_height="34dp" 
+	          
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	           
+	            />
+	        <TextView 
+	            android:text="@string/traininfo_ls" 
+	            android:layout_width="80dp" 
+	            android:gravity="center"
+	            
+	            android:layout_height="34dp" 
+	            android:textStyle="bold"
+	            android:textColor="#FFFFFF"
+	           
+	            />
+	        <TextView 
+	            android:text="@string/traininfo_lc" 
+	            android:layout_width="82dp" 
+	            android:gravity="center"
+	            android:layout_height="34dp" 
+	            android:textStyle="bold"
+	            
+	            android:textColor="#FFFFFF"
+	          
+	            />
+	    </LinearLayout>
+	    
+	    <ListView 
+	        android:id="@+id/traininformation_listview" 
+		    android:layout_width="735dp"
+	        android:layout_height="362dp" 
+		    android:layout_marginLeft="33dp"
+		    android:scrollbars="none"
+		    android:listSelector="@drawable/traininformation_backgroud"
+		    android:focusable="true"
+	        />
+	</LinearLayout>
+    
+    
+    
+</FrameLayout>

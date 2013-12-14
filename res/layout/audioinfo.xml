@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <cn.com.shine.hotel.util.CustomGallery
+        android:id="@+id/audiotv_cg_volume"
+        android:layout_width="960dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="555dp"
+        android:background="#91000000"
+        android:spacing="10dp"
+        android:unselectedAlpha="0.5" />
+
+</LinearLayout>

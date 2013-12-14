@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/index_right" >
+<!-- wsl 修改过 -->
+    <RelativeLayout
+        android:layout_width="800dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/phone" >
+
+        <TextView
+            android:id="@+id/commonphone_txt"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+           android:layout_marginLeft="25dp"
+            android:textColor="#53292b"
+            android:textSize="20sp"
+            android:text="@string/usedphone_commonphone" />
+
+        <TextView
+            android:id="@+id/hotelphone_txt"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/commonphone_txt"
+            android:layout_alignTop="@id/commonphone_txt"
+            android:gravity="center_horizontal"
+             android:textColor="#53292b"
+             android:textSize="20sp"
+            android:text="@string/usedphone_hotelphone" />
+
+        <ListView
+            android:id="@+id/usedphone_common_listview"
+            android:layout_width="320dp"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/commonphone_txt"
+            android:scrollbars="none"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="35dp"
+            android:paddingBottom="40dp"  
+            />
+
+        <ListView
+            android:id="@+id/usedphone_hotel_listview"
+            android:layout_width="320dp"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/hotelphone_txt"
+            android:scrollbars="none"
+            android:layout_toRightOf="@id/usedphone_common_listview"
+            android:layout_alignTop="@id/usedphone_common_listview"
+            android:paddingLeft="70dp"
+            android:paddingBottom="50dp"  
+            />
+    </RelativeLayout>
+    <!--
+        <ImageView 
+        android:id="@+id/service_phone"
+        android:src="@drawable/service_phone" 
+        android:layout_width="850dp" 
+        android:layout_height="800dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginLeft="70dp"
+        />
+    -->
+
+
+    <!--
+    <TextView   
+	   	android:id="@+id/commonphone_txt" 
+	   	android:layout_width="wrap_content"   
+	   	android:layout_height="wrap_content"
+	   	android:layout_marginLeft="280dp"
+	   	android:layout_marginTop="110dp"
+	   	android:text="@string/usedphone_commonphone"
+	   	/>
+    
+    <TextView   
+	   	android:id="@+id/hotelphone_txt" 
+	   	android:layout_width="wrap_content"   
+	   	android:layout_height="wrap_content"
+	   	android:layout_marginLeft="650dp"
+	   	android:layout_marginTop="110dp"
+	   	android:text="@string/usedphone_hotelphone"
+	   	/>
+    -->
+
+
+    <!--
+    <ListView 
+        android:id="@+id/usedphone_common_listview" 
+	    android:layout_width="332dp"
+        android:layout_height="fill_parent" 
+	    android:layout_marginLeft="155dp"
+	   	android:layout_marginTop="135dp"
+        />
+    
+    <ListView 
+        android:id="@+id/usedphone_hotel_listview" 
+	    android:layout_width="332dp"
+        android:layout_height="500dp" 
+	    android:layout_marginLeft="538dp"
+	   	android:layout_marginTop="135dp"
+        />
+    -->
+
+
+    <!--
+           <TextView   
+	   	android:id="@+id/homepage_txt" 
+	   	android:layout_width="wrap_content"   
+	   	android:layout_height="wrap_content"
+	   	android:layout_marginLeft="10dp"
+	   	android:layout_marginTop="645dp"
+	   	android:textSize="18sp"
+	   	android:textColor="@android:color/white"
+	   	android:text="跑跑跑马马马灯灯ddd灯跑跑跑ffff马马马灯灯灯跑dddd跑跑马马马灯灯灯跑ffff跑跑马马马灯灯灯马马马灯灯灯跑跑跑马马马灯灯灯马马马灯灯ddd灯跑跑跑马马马灯灯灯马马马灯灯灯跑跑跑sss马马马灯灯灯马马马灯灯灯跑跑跑马马马灯灯灯" 
+	   	android:singleLine="true"
+	   	android:ellipsize="marquee"   
+	   	android:focusable="true"   
+	   	android:marqueeRepeatLimit="marquee_forever"
+	   	android:focusableInTouchMode="true"   
+	   	android:scrollHorizontally="true"
+  		/>
+    -->
+
+</FrameLayout>

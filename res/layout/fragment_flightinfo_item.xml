@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_ll"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/flightinfo_item_col_1"
+        android:layout_width="132dp"
+       
+        style="@style/FlightInfoText.Item" />
+
+    <TextView
+        android:id="@+id/flightinfo_item_col_2"
+        android:layout_width="66dp"
+        style="@style/FlightInfoText.Item" />
+
+    <TextView
+        android:id="@+id/flightinfo_item_col_3"
+        android:layout_width="66dp"
+        style="@style/FlightInfoText.Item" />
+
+    <TextView
+        android:id="@+id/flightinfo_item_col_4"
+        android:layout_width="60dp"
+        style="@style/FlightInfoText.Item" />
+
+    <TextView
+        android:id="@+id/flightinfo_item_col_5"
+        android:layout_width="50dp"
+        style="@style/FlightInfoText.Item" />
+
+    <TextView
+        android:id="@+id/flightinfo_item_col_6"
+        android:layout_width="50dp"
+        style="@style/FlightInfoText.Item" />
+
+    <TextView
+        android:id="@+id/flightinfo_item_col_7"
+        android:layout_width="66dp"
+        style="@style/FlightInfoText.Item" />
+
+    <TextView
+        android:id="@+id/flightinfo_item_col_8"
+        android:layout_width="58dp"
+        style="@style/FlightInfoText.Item" />
+
+    <TextView
+        android:id="@+id/flightinfo_item_col_9"
+        android:layout_width="50dp"
+        style="@style/FlightInfoText.Item" />
+
+    <TextView
+        android:id="@+id/flightinfo_item_col_10"
+        android:layout_width="60dp"
+        style="@style/FlightInfoText.Item" />
+
+    <TextView
+        android:id="@+id/flightinfo_item_col_11"
+        android:layout_width="70dp"
+        style="@style/FlightInfoText.Item" />
+
+</LinearLayout>

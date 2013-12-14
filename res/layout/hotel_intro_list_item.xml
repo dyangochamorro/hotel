@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+     >
+
+    <ImageView
+        android:id="@+id/intro_list_item_img"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/p360_jingxuan_3"
+        android:padding="4dp"
+        android:background="@drawable/traininformation_backgroud" />
+
+</LinearLayout>
