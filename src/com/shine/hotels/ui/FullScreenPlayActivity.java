@@ -479,11 +479,15 @@ public class FullScreenPlayActivity extends Activity implements SurfaceHolder.Ca
     }
     
     private void pauseVideo() {
+        if (mPlayerManager == null) return;
+        
         mPlayerManager.pause();
         
     }
     
     private void resumeVideo() {
+        if (mPlayerManager == null) return;
+        
         mPlayerManager.resume();
     }
     

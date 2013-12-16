@@ -89,7 +89,7 @@ public class HotelsApplication extends Application {
 
         initTvDeskProvider();
         pipSkin = new PipSkin(this);
-        audioSkin = new AudioSkin(this);
+//        audioSkin = new AudioSkin(this);
         pictureSkin = new PictureSkin(this);
         timerSkin = new TimerSkin(this);
         commonSkin = new CommonSkin(this);
@@ -156,7 +156,7 @@ public class HotelsApplication extends Application {
 
     private PipSkin pipSkin;
 
-    private AudioSkin audioSkin;
+//    private AudioSkin audioSkin;
 
     private PictureSkin pictureSkin;
 
@@ -199,7 +199,7 @@ public class HotelsApplication extends Application {
             filter.addAction("com.mstar.tv.service.COMMON_EVENT_SIGNAL_AUTO_SWITCH");
             registerReceiver(rootBroadCastReceiver, filter);
             initLittleDownCounter();
-            audioSkin.connect(null);
+//            audioSkin.connect(null);
             pictureSkin.connect(null);
             timerSkin.connect(null);
             pipSkin.connect(null);
@@ -212,7 +212,7 @@ public class HotelsApplication extends Application {
     @Override
     public void onTerminate() {
         sContext = null;
-        audioSkin.disconnect();
+//        audioSkin.disconnect();
         pictureSkin.disconnect();
         timerSkin.disconnect();
         pipSkin.disconnect();
@@ -251,9 +251,9 @@ public class HotelsApplication extends Application {
         return tvDeskProvider;
     }
 
-    public AudioSkin getAudioSkin() {
-        return audioSkin;
-    }
+//    public AudioSkin getAudioSkin() {
+//        return audioSkin;
+//    }
 
     public PictureSkin getPictureSkin() {
         return pictureSkin;

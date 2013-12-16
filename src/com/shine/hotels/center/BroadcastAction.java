@@ -22,7 +22,7 @@ public class BroadcastAction {
     // 留言服务
     public static final String ROOMSERVICE_MEMOSERV = "broadcast.roomservice.MEMOSERV" ;
     // 后台播放音乐
-    public static final String AUDIO_PLAYBACKGROUND = "broadcast.audio.PLAYBACKGROUND" ;
+    public static final String AUDIO_PLAYBACKGROUND = "broadcast.audio.PLAYBACKGROUND_" ;
     // 停止后台播放音乐
     public static final String AUDIO_STOP_PLAYBACKGROUND = "broadcast.audio.STOPPLAYBACKGROUND" ;
     // 获得新消息

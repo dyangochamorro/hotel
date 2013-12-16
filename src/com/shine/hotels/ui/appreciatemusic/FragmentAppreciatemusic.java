@@ -186,8 +186,24 @@ public class FragmentAppreciatemusic extends BaseFragment implements OnItemSelec
         Request request = builder.obtain(Request.Action.GET_APPRECIATE_MUSIC).getResult();
         mController.handle(request);
         
+//        int vol = HotelsApplication.sMusicVol;
+//        mVol = vol > 0 ? vol : 20;
+//        mAudioSkin.setVolume(mVol);
+//        mProgressBar.setProgress(mVol);
+//        if (mAudioSkin.GetMuteFlag() && mService != null && mService.isPlaying()) {
+//            mVolIconIv.setImageResource(R.drawable.vol_mute);
+//        } else {
+//            mVolIconIv.setImageResource(R.drawable.vol_sound);
+//        }
+    }
+    
+    @Override
+    public void onStart() {
+        super.onStart();
+        
         int vol = HotelsApplication.sMusicVol;
-        mVol = vol > 0 ? vol : 20;
+        mVol = vol >= 0 ? vol : 20;
+        Log.d("audio", "on start...vol=" + mVol);
         mAudioSkin.setVolume(mVol);
         mProgressBar.setProgress(mVol);
         if (mAudioSkin.GetMuteFlag() && mService != null && mService.isPlaying()) {
@@ -204,6 +220,13 @@ public class FragmentAppreciatemusic extends BaseFragment implements OnItemSelec
         HotelsApplication.sMusicVol = mVol;
         
         super.onStop();
+    }
+    
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        
+        mAudioSkin.disconnect();
     }
 
     @Override
@@ -234,24 +257,19 @@ public class FragmentAppreciatemusic extends BaseFragment implements OnItemSelec
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if (parent == mGallery) {
-//            Appreciatemusic music = (Appreciatemusic)mGalleryAdapter.getItem(position);
-//            musicTitle.setText(music.getMusicspecialname()) ;
-//            Picasso.with(getActivity()).load(music.getSpecialposter()).placeholder(R.drawable.music_default).into(mPoster);
-//            List<MusicData> list = music.getData();
-//            mListAdapter.updateContent(list);
-            
         } else if (parent == mListView) {
             MusicData data = (MusicData)mListAdapter.getItem(position);
 
             Builder builder = new Builder();
-            Request request = builder.obtain(Request.Action.PLAY_APPRECIATE_MUSIC).
-                    putObject(data).getResult();
+            Request request = builder.obtain(Request.Action.PLAY_APPRECIATE_MUSIC).putObject(data)
+                    .getResult();
             if (mController != null)
                 mController.handle(request);
-            
-            if (mService != null) mService.playList(mListAdapter.getMusicList(), position);
+
+            if (mService != null)
+                mService.playList(mListAdapter.getMusicList(), position);
         }
-        
+
     }
     
     private void volumeUp() {
@@ -311,8 +329,9 @@ public class FragmentAppreciatemusic extends BaseFragment implements OnItemSelec
             if (action.equals(BroadcastAction.AUDIO_PLAYBACKGROUND)) {
                 int pos = intent.getIntExtra(CenterManager.CENTER_BROADCAST_MUSIC_POSITION, 0);
                 
-                Log.d("order", "onReceive pos=" + pos);
+//                Log.d("order", "onReceive pos=" + pos);
                 mListView.setSelection(pos);
+                
             }
         }
         
@@ -351,7 +370,6 @@ public class FragmentAppreciatemusic extends BaseFragment implements OnItemSelec
         public Object getItem(int position) {
             if (mList != null && mList.size() > 0) {
                 return mList.get(position % mList.size());
-//                return mList.get(position);
             }
             return null;
         }

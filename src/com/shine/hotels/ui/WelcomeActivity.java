@@ -23,6 +23,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
@@ -33,6 +34,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
@@ -153,10 +155,11 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome_activity);
-
-//        Intent intent = new Intent(this, MusicService.class);
-//        bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
         
+        ViewGroup decor = (ViewGroup) getWindow().getDecorView();
+        ViewGroup root = (ViewGroup)decor.getChildAt(0);
+        root.setVisibility(View.INVISIBLE);
+
         bindService(new Intent("com.shine.systemmanage.aidl"), serviceConnection, Context.BIND_AUTO_CREATE);
 
         // Log.w("shine", "onCreate...");
@@ -260,6 +263,15 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
         
         // logo
         Picasso.with(this).load(info.getLogo()).into(mLeftLogo);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                ViewGroup decor = (ViewGroup) getWindow().getDecorView();
+                ViewGroup root = (ViewGroup)decor.getChildAt(0);
+                root.setVisibility(View.VISIBLE);
+            }
+        }, 500);
 
         final int num = info.getNum();
         // Log.d("shine", "onEvent BootInfo...num=" + num);

@@ -93,9 +93,11 @@ public class MusicService extends Service {
             String url = music.getMusicurl();
             
             if (mPlayerManager == null) {
+                Log.d("audio", "new player");
                 mPlayerManager = new PlayerManager();
                 mPlayerManager.setOnPlayerEventListener(new PlayerManagerListener());
             }
+            Log.d("audio", "setContent url=" + url);
             mPlayerManager.setContentSource(url);
             mPlayerManager.play(url);
             mIsPlaying = true;
@@ -161,7 +163,7 @@ public class MusicService extends Service {
             // TODO Auto-generated method stub
             String action = intent.getAction();
             if (action.equals(BroadcastAction.MUSIC_STOP_PLAYING)) {
-//                Log.i("order", "stop music !!!");
+                Log.i("audio", "stop music !!!");
                 stop();
                 mPlayerManager = null;
                 
