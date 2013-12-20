@@ -156,9 +156,9 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome_activity);
         
-        ViewGroup decor = (ViewGroup) getWindow().getDecorView();
-        ViewGroup root = (ViewGroup)decor.getChildAt(0);
-        root.setVisibility(View.INVISIBLE);
+//        ViewGroup decor = (ViewGroup) getWindow().getDecorView();
+//        ViewGroup root = (ViewGroup)decor.getChildAt(0);
+//        root.setVisibility(View.INVISIBLE);
 
         bindService(new Intent("com.shine.systemmanage.aidl"), serviceConnection, Context.BIND_AUTO_CREATE);
 
@@ -263,15 +263,14 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
         
         // logo
         Picasso.with(this).load(info.getLogo()).into(mLeftLogo);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                // TODO Auto-generated method stub
-                ViewGroup decor = (ViewGroup) getWindow().getDecorView();
-                ViewGroup root = (ViewGroup)decor.getChildAt(0);
-                root.setVisibility(View.VISIBLE);
-            }
-        }, 500);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                ViewGroup decor = (ViewGroup) getWindow().getDecorView();
+//                ViewGroup root = (ViewGroup)decor.getChildAt(0);
+//                root.setVisibility(View.VISIBLE);
+//            }
+//        }, 500);
 
         final int num = info.getNum();
         // Log.d("shine", "onEvent BootInfo...num=" + num);
