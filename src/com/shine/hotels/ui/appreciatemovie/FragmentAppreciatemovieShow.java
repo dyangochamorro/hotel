@@ -112,13 +112,18 @@ public class FragmentAppreciatemovieShow extends BaseFragment implements OnClick
 	    
 	    stopMusicPlay();
 
-	    if (v == mPlay) {
+        if (v == mPlay) {
             List<PlayintromsgData> list = showData.getData();
             if (list == null || list.size() == 0) {
-                Intent intent = new Intent(HotelsApplication.ACTION_PLAY_FULL_SCREEN);
-                intent.putExtra(FullScreenPlayActivity.INTENT_KEY_MOVIE_URL, showData.getMovieplayurl().get(0));
-                intent.putExtra(FullScreenPlayActivity.INTENT_KEY_PLAY_TYPE, FullScreenPlayActivity.TYPE_PLAY);
-                getActivity().startActivity(intent);
+                List<String> movieplayurl = showData.getMovieplayurl();
+                if (movieplayurl != null) {
+                    Intent intent = new Intent(HotelsApplication.ACTION_PLAY_FULL_SCREEN);
+                    intent.putExtra(FullScreenPlayActivity.INTENT_KEY_MOVIE_URL,
+                            movieplayurl.get(0));
+                    intent.putExtra(FullScreenPlayActivity.INTENT_KEY_PLAY_TYPE,
+                            FullScreenPlayActivity.TYPE_PLAY);
+                    getActivity().startActivity(intent);
+                }
             } else {
                 Fragment confirm = new VODPayFragment();
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
@@ -136,10 +141,14 @@ public class FragmentAppreciatemovieShow extends BaseFragment implements OnClick
             }
             
         } else if (v == mPreview) {
-            Intent intent = new Intent(HotelsApplication.ACTION_PLAY_FULL_SCREEN);
-            intent.putExtra(FullScreenPlayActivity.INTENT_KEY_MOVIE_URL, showData.getMovieplayurl().get(0));
-            intent.putExtra(FullScreenPlayActivity.INTENT_KEY_PLAY_TYPE, FullScreenPlayActivity.TYPE_PREVIEW);
-            getActivity().startActivity(intent);
+            List<String> movieplayurl = showData.getMovieplayurl();
+            if (movieplayurl != null) {
+                Intent intent = new Intent(HotelsApplication.ACTION_PLAY_FULL_SCREEN);
+                intent.putExtra(FullScreenPlayActivity.INTENT_KEY_MOVIE_URL, movieplayurl.get(0));
+                intent.putExtra(FullScreenPlayActivity.INTENT_KEY_PLAY_TYPE,
+                        FullScreenPlayActivity.TYPE_PREVIEW);
+                getActivity().startActivity(intent);
+            }
         }
     }
 	

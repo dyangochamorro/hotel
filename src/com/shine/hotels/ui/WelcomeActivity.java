@@ -378,11 +378,15 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
     public boolean dispatchKeyEvent(KeyEvent event) {
         final int action = event.getAction();
         final int keyCode = event.getKeyCode();
+        
+        if (action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_BACK) {
+            return true;
+        }
 
         if (action == KeyEvent.ACTION_DOWN && !mForbidKeyEvent) {
             switch (keyCode) {
-                case KeyEvent.KEYCODE_BACK:
-                    return true;
+//                case KeyEvent.KEYCODE_BACK:
+//                    return true;
                 case KeyEvent.KEYCODE_DPAD_LEFT:
                     mPwd = new int[PWD.length];
                     mPwd[0] = KeyEvent.KEYCODE_DPAD_LEFT;
