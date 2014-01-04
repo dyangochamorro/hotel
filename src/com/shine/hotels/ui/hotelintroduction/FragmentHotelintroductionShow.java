@@ -28,6 +28,7 @@ import com.shine.hotels.controller.Request.Builder;
 import com.shine.hotels.io.model.HotelintroductionShow;
 import com.shine.hotels.ui.BaseFragment;
 import com.shine.hotels.ui.FullScreenPlayActivity;
+import com.shine.hotels.util.Utils;
 import com.squareup.picasso.Picasso;
 
 import de.greenrobot.event.EventBus;
@@ -68,7 +69,7 @@ public class FragmentHotelintroductionShow extends BaseFragment {
             
             @Override
             public void onClick(View v) {
-                if (TextUtils.isEmpty(mTvUrl)) return;
+                if (TextUtils.isEmpty(mTvUrl) || !Utils.isNetworking(getActivity())) return;
                 
                 stopMusicPlay();
                 
@@ -84,8 +85,11 @@ public class FragmentHotelintroductionShow extends BaseFragment {
             
             @Override
             public void onClick(View v) {
+                if (!Utils.isNetworking(getActivity())) return;
+                
                 Intent intent = new Intent(getActivity(), PPTActivity.class);
-                intent.putStringArrayListExtra(PPTActivity.INTENT_KEY_PICS, (ArrayList<String>)mPics);
+                intent.putStringArrayListExtra(PPTActivity.INTENT_KEY_PICS,
+                        (ArrayList<String>)mPics);
                 getActivity().startActivity(intent);
             }
         });

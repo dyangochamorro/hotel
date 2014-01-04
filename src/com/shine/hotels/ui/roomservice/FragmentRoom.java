@@ -116,6 +116,8 @@ public class FragmentRoom extends BaseFragment implements OnItemClickListener {
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        if (mImageUrls == null || mImageUrls.length == 0) return;
+        
         int pos = position % mImageUrls.length;
         Log.d("shine", "room click:" + pos);
         

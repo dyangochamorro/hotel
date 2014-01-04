@@ -81,8 +81,8 @@ public class HotelsApplication extends Application {
         
         sContext = this;
 
-        ThemeManager theme = ThemeManager.get(getApplicationContext());
-        theme.setTheme("com.shine.hoteltheme");
+//        ThemeManager theme = ThemeManager.get(getApplicationContext());
+//        theme.setTheme("com.shine.hoteltheme");
 
         CenterManager centerManager = CenterManager.get(getApplicationContext());
         centerManager.init();
@@ -105,8 +105,10 @@ public class HotelsApplication extends Application {
 
     }
     
-    public static void showText() {
-        Toast.makeText(sContext, R.string.network_exception, Toast.LENGTH_LONG);
+    public static void showText(int cnt) {
+        Toast.makeText(sContext,
+                sContext.getResources().getString(R.string.network_exception) + " " + cnt,
+                Toast.LENGTH_LONG).show();
     }
 
     public static void setCurrentLang(String lang) {

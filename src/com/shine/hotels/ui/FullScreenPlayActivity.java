@@ -1,14 +1,13 @@
 package com.shine.hotels.ui;
 
+import java.lang.ref.WeakReference;
 import java.util.Calendar;
 import java.util.Date;
 
 import android.app.Activity;
 import android.app.AlarmManager;
-import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Color;
@@ -98,7 +97,7 @@ public class FullScreenPlayActivity extends Activity implements SurfaceHolder.Ca
         PAUSE
     }
     
-    private STATE mState = STATE.PLAYING;
+    private volatile STATE mState = STATE.PLAYING;
     
     private SubtitleController mController;
     
@@ -170,6 +169,13 @@ public class FullScreenPlayActivity extends Activity implements SurfaceHolder.Ca
 
 //        showInfoBox();
     }
+    
+    @Override
+    protected void onPause() {
+        super.onPause();
+        
+        if (exitDialog != null) exitDialog.dismiss();
+    }
 
     @Override
     protected void onDestroy() {
@@ -228,11 +234,16 @@ public class FullScreenPlayActivity extends Activity implements SurfaceHolder.Ca
                 }
                 break;
             case E_MM_INTERFACE_EXIT_ERROR:
+                Log.d("order", "E_MM_INTERFACE_EXIT_ERROR");
                 break;
             case E_MM_INTERFACE_INSUFFICIENT_DATA:
+                Log.d("order", "E_MM_INTERFACE_INSUFFICIENT_DATA");
 //                stopVideo();
 //                finish();
               break;
+            case E_MM_INTERFACE_NULL:
+                Log.d("order", "E_MM_INTERFACE_NULL");
+                break;
 
             default:
                 break;
@@ -243,13 +254,14 @@ public class FullScreenPlayActivity extends Activity implements SurfaceHolder.Ca
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         Log.v("order", "surfaceCreated...");
-        playVideo(holder);
+//        playVideo(holder);
     }
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
         // TODO Auto-generated method stub
-        
+        Log.v("order", "surfaceChanged...");
+        playVideo(holder);
     }
 
     @Override
@@ -418,17 +430,54 @@ public class FullScreenPlayActivity extends Activity implements SurfaceHolder.Ca
         time.append(Utils.formatTime(mTotal));
     }
     
-    private void playVideo(SurfaceHolder holder) {
-        String url = mMovieUrl;
-        if (mPlayerManager != null) {
-            mPlayerManager.setContentSource(url);
-            mPlayerManager.setDisplay(holder);
-            mPlayerManager.play(url);
-            
-            Log.d("order", "player play url = " + url);
-            
-            mState = STATE.PLAYING;
+    class PlayThread extends Thread {
+        WeakReference<PlayerManager> ref;
+        WeakReference<SurfaceHolder> refH;
+        
+        public PlayThread(PlayerManager playerManager, SurfaceHolder holder) {
+            ref = new WeakReference<PlayerManager>(playerManager);
+            refH = new WeakReference<SurfaceHolder>(holder);
         }
+        
+        @Override
+        public void run() {
+            String url = mMovieUrl;
+            PlayerManager playerManager = ref.get();
+            SurfaceHolder holder = refH.get();
+            if (playerManager != null && holder != null) {
+                try {
+                    playerManager.setContentSource(url);
+                    if (holder != null)
+                        playerManager.setDisplay(holder);
+                    playerManager.play(url);
+                    
+                } catch (Exception e) {
+                    playerManager.stop();
+                    Log.e("shine", e.getMessage());
+                    return;
+                }
+
+                Log.d("order", "player play url = " + url);
+
+                mState = STATE.PLAYING;
+            }
+        }
+    }
+    
+    private void playVideo(final SurfaceHolder holder) {
+        
+        PlayThread thread = new PlayThread(mPlayerManager, holder);
+        thread.start();
+//        String url = mMovieUrl;
+//        if (mPlayerManager != null) {
+//            mPlayerManager.setContentSource(url);
+//            mPlayerManager.setDisplay(holder);
+//            mPlayerManager.play(url);
+//            
+//            Log.d("order", "player play url = " + url);
+//            
+//            mState = STATE.PLAYING;
+//        }
     }
     
     private void restart() {
@@ -609,6 +658,7 @@ public class FullScreenPlayActivity extends Activity implements SurfaceHolder.Ca
         return time.toString();
     }
     
+    ExitDialog exitDialog;
     private void showExitDialog() {
 //        new AlertDialog.Builder(this)
 //                .setMessage(R.string.exit_vod)
@@ -629,8 +679,8 @@ public class FullScreenPlayActivity extends Activity implements SurfaceHolder.Ca
 //                }).show();
 //        
 //        
-        ExitDialog dialog = new ExitDialog(this);
-        dialog.show();
+        exitDialog = new ExitDialog(this);
+        exitDialog.show();
     }
     
     private GetTime mGetTime = new GetTime();

@@ -135,9 +135,9 @@ public class TestData {
     		"{\"airline\":\"国航\",\"number\":\"CA1118\",\"expectedDepart\":\"13:00\",\"actualDepart\":\"13:30\",\"departure\":\"北京\",\"departureTerminal\":\"T3\",\"expectedArrive\":\"15：23\",\"actualArrive\":\"15:50\",\"destination\":\"上海\",\"destinationTerminal\":\"---\",\"status\":\"到达\"}]}," +
     		"{\"category\":\"国内出港航班\",\"data\":[{\"airline\":\"国航\",\"number\":\"CA1118\",\"expectedDepart\":\"13:00\",\"actualDepart\":\"13:30\",\"departure\":\"北京\",\"departureTerminal\":\"T3\",\"expectedArrive\":\"15：23\",\"actualArrive\":\"15:50\",\"destination\":\"上海\",\"destinationTerminal\":\"---\",\"status\":\"到达\"}]}]";
 
-    public static final String Appreciatetv = "[{\"categorytypename\":\"央视频道\",\"categorys\":[{\"categoryname\":\"CCTV5\",\"categorypic\":\"http://172.168.11.13/hotel/cctv5.png\",\"categoryurl\":\"http://172.168.11.13/hotel/tv.wmn\"}]}," +
-    											"{\"categorytypename\":\"地方频道\",\"categorys\":[{\"categoryname\":\"湖南卫视\",\"categorypic\":\"http://172.168.11.13/hotel/cctv5.png\",\"categoryurl\":\"http://172.168.11.13/hotel/tv.wmn\"}]}]" ;
-    
+    public static final String Appreciatetv = "[{\"categorytypename\":\"央视频道\",\"categorys\":[{\"categoryname\":\"CCTV5\",\"categorypic\":\"http://172.168.11.13/hotel/cctv5.png\",\"categoryurl\":0}]},"
+            + "{\"categorytypename\":\"地方频道\",\"categorys\":[{\"categoryname\":\"湖南卫视\",\"categorypic\":\"http://172.168.11.13/hotel/cctv5.png\",\"categoryurl\":0}]}]";
+
     public static final String Appreciatemovie = "[{\"movietypename\":\"科幻片\",\"movies\":[{\"moviename\":\"绿巨人\",\"moviepic\":\"http://172.168.11.13/hotel/green.png\",\"movieId\":45678}," +
     		"{\"moviename\":\"绿巨人\",\"moviepic\":\"http://172.168.11.13/hotel/green.png\",\"movieId\":45678}," +
     		"{\"moviename\":\"绿巨人\",\"moviepic\":\"http://172.168.11.13/hotel/green.png\",\"movieId\":45678}," +

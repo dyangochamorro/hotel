@@ -120,6 +120,8 @@ public class FragmentGuidebook extends BaseFragment implements OnItemClickListen
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        if (mImageUrls == null || mImageUrls.length == 0) return;
+        
         int pos = position % mImageUrls.length;
         Log.d("shine", "guidebook click:" + pos);
         

@@ -115,6 +115,8 @@ public class FragmentVOD extends BaseFragment implements OnItemClickListener {
     
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        if (mImageUrls == null || mImageUrls.length == 0) return;
+        
         int pos = position % mImageUrls.length;
         
         if (null!=menus && menus.size()>0 && null!=menus.get(pos)) {

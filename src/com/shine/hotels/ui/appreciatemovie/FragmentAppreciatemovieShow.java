@@ -2,7 +2,10 @@ package com.shine.hotels.ui.appreciatemovie;
 
 import java.util.List;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -30,9 +33,9 @@ import com.shine.hotels.io.model.AppreciatemovieShow;
 import com.shine.hotels.io.model.PlayintromsgData;
 import com.shine.hotels.ui.BaseFragment;
 import com.shine.hotels.ui.FullScreenPlayActivity;
-import com.shine.hotels.ui.HostActivity;
 import com.shine.hotels.ui.UIConfig;
 import com.shine.hotels.ui.VODPayFragment;
+import com.shine.hotels.util.Utils;
 import com.squareup.picasso.Picasso;
 
 import de.greenrobot.event.EventBus;
@@ -108,7 +111,7 @@ public class FragmentAppreciatemovieShow extends BaseFragment implements OnClick
 	
 	@Override
     public void onClick(View v) {
-	    if (showData == null) return;
+	    if (showData == null || !Utils.isNetworking(getActivity())) return;
 	    
 	    stopMusicPlay();
 

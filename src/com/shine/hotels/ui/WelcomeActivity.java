@@ -162,7 +162,7 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
 
         bindService(new Intent("com.shine.systemmanage.aidl"), serviceConnection, Context.BIND_AUTO_CREATE);
 
-        // Log.w("shine", "onCreate...");
+         Log.w("shine", "onCreate...");
         mAuthTv = (TextView)findViewById(R.id.auth_tv);
 
         contentmrView = (TextView)findViewById(R.id.content_mr);
@@ -191,6 +191,8 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
 
         if (savedInstanceState == null) {
             new InitHostTask().execute();
+        } else {
+            doRequest();
         }
 
         ITvServiceServer tvService = ITvServiceServer.Stub.asInterface(ServiceManager
@@ -218,7 +220,7 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
         Log.e("shine", "onDestroy killProcess");
         android.os.Process.killProcess(android.os.Process.myPid());
     }
-
+    
     private IShineSystemManage myService = null;
     private ServiceConnection serviceConnection = new ServiceConnection() {
 
@@ -447,7 +449,7 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
 
     @Override
     protected void onResume() {
-        // Log.d("shine", "onResume...");
+         Log.d("shine", "onResume...");
         super.onResume();
 
         if (mIsFirst) {
@@ -459,7 +461,7 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
 
     @Override
     public void onStart() {
-        // Log.d("shine", "onStart...");
+         Log.d("shine", "onStart...");
         super.onStart();
         EventBus.getDefault().register(this);
     }
@@ -601,6 +603,17 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
             return host;
         }
     }
+    
+    private void doRequest() {
+        mController = (WelcomeController)ControllerManager.newController(WelcomeActivity.this,
+                WelcomeController.class);
+        Builder builder = new Builder();
+        Request request = builder.obtain(Request.Action.WELCOME_INIT).getResult();
+        mController.handle(request);
+
+        Request request2 = builder.obtain(Request.Action.BOOT_INFO).getResult();
+        mController.handle(request2);
+    }
 
     private class InitHostTask extends AsyncTask<Void, Void, String> {
 
@@ -626,14 +639,15 @@ public class WelcomeActivity extends Activity implements OnClickListener, OnFocu
                 APIManager.HOST = "http://" + result + "/hotel/";
             }
 
-            mController = (WelcomeController)ControllerManager.newController(WelcomeActivity.this,
-                    WelcomeController.class);
-            Builder builder = new Builder();
-            Request request = builder.obtain(Request.Action.WELCOME_INIT).getResult();
-            mController.handle(request);
-
-            Request request2 = builder.obtain(Request.Action.BOOT_INFO).getResult();
-            mController.handle(request2);
+            doRequest();
+//            mController = (WelcomeController)ControllerManager.newController(WelcomeActivity.this,
+//                    WelcomeController.class);
+//            Builder builder = new Builder();
+//            Request request = builder.obtain(Request.Action.WELCOME_INIT).getResult();
+//            mController.handle(request);
+//
+//            Request request2 = builder.obtain(Request.Action.BOOT_INFO).getResult();
+//            mController.handle(request2);
         }
 
         public String getHost(String path) throws Exception {

@@ -4,9 +4,11 @@ package com.ics.mm;
 import java.lang.ref.WeakReference;
 
 
+
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 
@@ -243,22 +245,20 @@ public class PlayerManager {
     }
 
     
-    private static void postEventFromNative(Object srv_ref,int eCmd, int u32Param, int u32Info)
-        {
-            PlayerManager srv = (PlayerManager) ((WeakReference) srv_ref).get();
-            if (srv == null)
-            {
-                return;
-            }
-            EnumMmInterfaceNotifyType notify  = EnumMmInterfaceNotifyType.values()[eCmd];
-            
-            if (srv.mEventHandler != null)
-            {
-                Message m = srv.mEventHandler.obtainMessage(EVENT.EVENT_FROM_NATIVE.ordinal(),notify);
-                srv.mEventHandler.sendMessage(m);
-            }
+    private static void postEventFromNative(Object srv_ref, int eCmd, int u32Param, int u32Info) {
+        PlayerManager srv = (PlayerManager)((WeakReference)srv_ref).get();
+        if (srv == null) {
             return;
         }
+        Log.e("order", "eCmd=" + eCmd);
+        EnumMmInterfaceNotifyType notify = EnumMmInterfaceNotifyType.values()[eCmd];
+
+        if (srv.mEventHandler != null) {
+            Message m = srv.mEventHandler.obtainMessage(EVENT.EVENT_FROM_NATIVE.ordinal(), notify);
+            srv.mEventHandler.sendMessage(m);
+        }
+        return;
+    }
 
     public native int setContentSource(String str);
     public native int init(Surface msurface);

@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import android.app.IntentService;
 import android.content.Intent;
 import android.os.Binder;
+import android.util.Log;
 
 import com.shine.hotels.center.BroadcastAction;
 import com.shine.hotels.center.CenterManager;
@@ -84,18 +85,21 @@ public class SystemLocalService extends IntentService {
 
                 BootInfo bootInfo = null;
                 // 网络连接=====================================
-                for (int i = 0; i < 4; i++) {
-                    bootInfo = mEngine.httpGetRequest(APIManager.API_BOOT_INFO,
-                            intent.getBundleExtra(APIManager.HTTP_PARAM_KEY),
-                            new BootInfoHandler());
-                    if (bootInfo != null) {
-                        break;
-                    } else if (i == 3) {
-                        break;
-                    }
-                    Thread.sleep(5000);
-
-                }
+//                for (int i = 0; i < 4; i++) {
+//                    bootInfo = mEngine.httpGetRequest(APIManager.API_BOOT_INFO,
+//                            intent.getBundleExtra(APIManager.HTTP_PARAM_KEY),
+//                            new BootInfoHandler());
+//                    if (bootInfo != null) {
+//                        break;
+//                    } else if (i == 3) {
+//                        break;
+//                    }
+//                    Thread.sleep(5000);
+//
+//                }
+                bootInfo = mEngine.httpGetRequest(APIManager.API_BOOT_INFO,
+                        intent.getBundleExtra(APIManager.HTTP_PARAM_KEY),
+                        new BootInfoHandler());
                 Intent intentRes = new Intent(BroadcastAction.BOOT_INFO);
                 intentRes.putExtra(CenterManager.CENTER_BROADCAST_RESULT,
                         bootInfo);
@@ -106,17 +110,20 @@ public class SystemLocalService extends IntentService {
                 // Log.d("shine", "onHandleIntent Request.Action.WELCOME_INIT");
                 WelcomeList list = null;
                 // 网络连接=====================================
-                for (int i = 0; i < 4; i++) {
-                    list = mEngine.httpGetRequest(APIManager.API_WELCOME_INIT,
-                            intent.getBundleExtra(APIManager.HTTP_PARAM_KEY),
-                            new WelcomeHandler());
-                    if (list != null) {
-                        break;
-                    } else if (i == 3) {
-                        break;
-                    }
-                    Thread.sleep(5000);
-                }
+//                for (int i = 0; i < 4; i++) {
+//                    list = mEngine.httpGetRequest(APIManager.API_WELCOME_INIT,
+//                            intent.getBundleExtra(APIManager.HTTP_PARAM_KEY),
+//                            new WelcomeHandler());
+//                    if (list != null) {
+//                        break;
+//                    } else if (i == 3) {
+//                        break;
+//                    }
+//                    Thread.sleep(5000);
+//                }
+                list = mEngine.httpGetRequest(APIManager.API_WELCOME_INIT,
+                        intent.getBundleExtra(APIManager.HTTP_PARAM_KEY),
+                        new WelcomeHandler());
                 if (null == list) {
                     WelcomeHandler handler = new WelcomeHandler();
                     String response = TestData.HOMEPAGE;
@@ -178,6 +185,7 @@ public class SystemLocalService extends IntentService {
 
             JSONArray array;
             try {
+//                Log.v("shine", "response:" + response);
                 array = new JSONArray(response);
                 int size = array.length();
                 lists = new WelcomeList();
@@ -187,13 +195,13 @@ public class SystemLocalService extends IntentService {
                     JSONObject json = array.getJSONObject(i);
                     Welcome welcome = new Welcome();
 
-                    welcome.setCustomerName(json.getString("customername"));
-                    welcome.setWelcoming(json.getString("welcomeing"));
-                    welcome.setLanguageName(json.getString("languagename"));
-                    welcome.setLanguagePicNo(json.getString("languagepic_no"));
-                    welcome.setLanguagePicYes(json.getString("languagepic_yes"));
-                    welcome.setLanguagevalue(json.getString("languagevalue"));
-                    welcome.setStatus(json.getInt("status"));
+                    welcome.setCustomerName(json.optString("customername"));
+                    welcome.setWelcoming(json.optString("welcomeing"));
+                    welcome.setLanguageName(json.optString("languagename"));
+                    welcome.setLanguagePicNo(json.optString("languagepic_no"));
+                    welcome.setLanguagePicYes(json.optString("languagepic_yes"));
+                    welcome.setLanguagevalue(json.optString("languagevalue"));
+                    welcome.setStatus(json.optInt("status"));
 
                     mList.add(welcome);
                 }

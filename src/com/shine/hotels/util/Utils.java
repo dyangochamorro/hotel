@@ -7,6 +7,8 @@ import java.util.Date;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
@@ -159,6 +161,21 @@ public class Utils {
 	            return String.format("%02d:%02d:%02d", hour, min, sec);
 	        } else {
 	            return String.format("%02d:%02d", min, sec);
+	        }
+	    }
+	 
+	 public static boolean isNetworking(Context context) {
+	        ConnectivityManager cManager = (ConnectivityManager)context.getSystemService(
+	                Context.CONNECTIVITY_SERVICE);
+	        NetworkInfo info = cManager.getNetworkInfo(ConnectivityManager.TYPE_ETHERNET);
+	        if (info != null && info.isAvailable()) {
+	            // do something
+	            Log.v("shine", "networking true");
+	            return true;
+	        } else {
+	            // do something
+	            Log.v("shine", "networking false");
+	            return false;
 	        }
 	    }
 }
